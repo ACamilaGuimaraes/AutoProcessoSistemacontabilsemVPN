@@ -1,0 +1,89 @@
+Automatização utilizando navegação sem acesso ao vpn
+
+from calendar import c
+import pyautogui
+import time
+
+pyautogui.alert('O código vai começar, não use nada do seu computador enquanto o código está rodando')
+pyautogui.PAUSE = 0.5
+
+# Abrir o 'sistema contabil' no meu computador
+pyautogui.press('winleft')
+pyautogui.write('nome do sistema contábil')
+pyautogui.press('enter')
+
+time.sleep(10)
+
+# Clicar no executar do sistema contábil
+pyautogui.click(755,398)
+
+time.sleep(50)
+
+#Clicar no campo Senha
+pyautogui.click(671,370)
+
+#Digitar o usuário
+pyautogui.write('Login Windows')
+pyautogui.press('tab') 
+
+#Digitar a senha
+pyautogui.write('senha Windows')
+pyautogui.press('enter') 
+
+time.sleep(50)
+
+#Clicar no menu relatórios
+pyautogui.click(1115,31)
+
+time.sleep(15)
+
+pyautogui.mouseUp()
+#Clicar em 'Espelho e resumo da folha' 
+pyautogui.click(1261,59)
+
+time.sleep(5)
+
+#Digitar o numero da empresa no campo 'Empresa'
+pyautogui.click(177,128)
+pyautogui.write('495')
+pyautogui.press('enter') 
+
+time.sleep(5)
+
+#Digitar a competência
+pyautogui.click(142,358)
+pyautogui.write('072024')
+
+time.sleep(10)
+
+#Pressionar as teclas alt+F8 para visualizar o arquivo
+pyautogui.hotkey('alt', 'f8')
+
+time.sleep(10)
+
+
+#Clicar na 'impressora' 
+pyautogui.click(604,125)
+
+time.sleep(20)
+
+#Clicar em 'ok' na tela de impressão
+pyautogui.click(832,523)
+
+time.sleep(20)
+
+#Clicar no campo de endereço da pasta
+pyautogui.click(352,58)
+
+#Clicar na barra de tarefas
+# Digitar o endereço da 'area de trabalho' 
+pyautogui.write("W:\Camila")
+
+time.sleep(10)
+
+#Clicar 'salvar'
+pyautogui.click(511,612)
+
+time.sleep(10)
+
+pyautogui.alert('O código já terminou de rodar, pode usar o seu computador')
